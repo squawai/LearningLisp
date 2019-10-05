@@ -1,6 +1,7 @@
 # LearningLisp
 
-this repository mainly contains my lisp codes written in order to learn Lisp 
+this repository mainly consists of two things,
+my lisp codes written in order to learn Lisp 
 and notes in reading SICP.
 
 I am a beginner of Logic and CS.
