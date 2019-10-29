@@ -1,4 +1,8 @@
 #lang racket
+;; this is a test for following instructions related to a list
+;; - cdr
+;; - car
+;; - null?
 
 (define x '(2 3 5 7 11 13 17 19))
 x
