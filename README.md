@@ -11,17 +11,16 @@ which seem to be the different appearances of the single thing to me.
 What I want to do in reading SICP is to construct Mathematics in some sense,
 or to follow the history of formalization of Math by myself.
 
+
 ## of codes
 
-I put Scheme codes written for a coding practice.
+I put Scheme codes written for a coding practice in this directory.
 There might be a simple and tiny codes.
-Most of them should be components of my solutions
-to the exercises in SICP.
 
 
 ## of SICP
 
-I call simply SICP the book "Strcuture and Interpretation of Computer Programs"
+I call simply SICP the book "Structure and Interpretation of Computer Programs"
 by Abelson, Sussman, and Sussman.
 
 This book is freely available here: https://github.com/sarabander/sicp
