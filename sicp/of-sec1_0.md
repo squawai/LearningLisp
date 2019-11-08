@@ -8,8 +8,16 @@
 - program
 
 
+### Keywords 
+
+* Lisp; LISt Processing
+* quantitative phenomena
+* a practical programming language
 
 
+## Papers and Books
+
+* /Recursive Functions of Sumbolic Expression and Their COmputaion by Machine/
 
 ## definitions
 
@@ -19,4 +27,6 @@
 * apprentice: n. someone who is learning a job, especially a job you do with your hands.
 * novice: n. a person who has just begun learning how to do something.
 * expertise: n. special skills or knowledge.
-
+* quantitative: adj. NOT FOUND IN POCKET LONGMAN
+* conceive: v. to become pregnant
+* acronym: n. a word that is made from the first letters of a group of words.
