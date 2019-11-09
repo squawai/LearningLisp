@@ -2,10 +2,6 @@
 
 ## memorandam
 
-### computational process: our concern to study
-
-- data
-- program
 
 
 ### Keywords 
@@ -13,7 +9,9 @@
 * Lisp; LISt Processing
 * quantitative phenomena
 * a practical programming language
-
+* a procedure
+* "passive" data
+* "active" data
 
 ## Papers and Books
 
@@ -30,3 +28,10 @@
 * quantitative: adj. NOT FOUND IN POCKET LONGMAN
 * conceive: v. to become pregnant
 * acronym: n. a word that is made from the first letters of a group of words.
+* concerted: v. anxious or worried
+* implementation: cf. implement
+	* implement: v. to begin to use a plan or system
+* resist: v. 1˚ to fight against; 2˚ to stop yourself doing something
+* promulgate: v. to accounce
+* inefficient: adj. not working well, and wasting time, money, or energy
+* blur: n. something that you cannot see or remember clearly
