@@ -37,13 +37,13 @@ whose general form is
 ```
 
 
-Parenthesized pairs of expression following the symbol `cond` are called **clauses**[^2].
+Parenthesized pairs of expression following the symbol `cond` are called **clauses**[^1].
 The first expression in each pair is a *predicate*--that is,
 an expression whose value is interpreted as either true of false.
 
-[^2]: `cond` stands for "conditional".
+[^1]: `cond` stands for "conditional".
 
-Conditional expression are evaluated as follows[^1]:
+Conditional expression are evaluated as follows[^2]:
 1. The predicate on the top is evaluated first.  
 1. If its value is false, then the predicate on the next line is evaluated.  
 1. This process continues until a predicate is found whose value is true,
@@ -52,12 +52,38 @@ Conditional expression are evaluated as follows[^1]:
 If none of the predicates is found to be true, 
 the value of the `cond` is undefined.
 
-[^1]: In this case, I describe the process as if the line break is needed. 
+[^2]: In this case, I describe the process as if the line break is needed. 
 
 
+Another way to write the absolute-value procedure is
 
-### Keywords
+```scheme
+(define (abs x)
+  (if (< x 0)
+      (-x)
+      x))
+```
 
+This uses the special form `if`, 
+a restricted type of conditional that can be used when there are precisely two cases in the case analysis.
+The general form of an `if` expression is
+
+```scheme
+(if <predicate> <consequent> <alternative>)
+```
+
+To evaluate an `if` expression,
+the interpreter starts by evaluating the <*predicate*> part of the expression.
+If the <*predicate*> evaluates to a true value, the interpreter then evaluates the <*consequent*> and 
+returns its value.
+Otherwise, 
+it evaluates the <*alternative*> and returns its value.
+
+### Logical composition operations
+
+* `and`
+* `or`
+* `not`
 
 ## Summary
 
