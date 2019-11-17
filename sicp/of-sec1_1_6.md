@@ -85,6 +85,10 @@ it evaluates the <*alternative*> and returns its value.
 * `or`
 * `not`
 
+We can use this to get the range 5 < x 10 as 
+`(and (> x 5) (< x 10))`
+
+
 ## Summary
 
 ## Definitions
