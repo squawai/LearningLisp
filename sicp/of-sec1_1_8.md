@@ -113,8 +113,7 @@ is important tool for helping to organize the construction of large programs.
 
 
 
-## Definition
-
+## Definition 
 * mutual: adj. shared by two or more people
 * disturb: v. to make someone feel worried or upset
 * circular: adj. moving in a direction that takes you back to where you started
@@ -123,13 +122,11 @@ is important tool for helping to organize the construction of large programs.
 * abstract: adj. based on ideas rather than specific examples or real events
 * implement: v. to begin to use a plan or system
 * profound: adj. showing a lot of knowledge and understandign a subject
-* intention: 
-* bind:
-* capture: 
-* isolation: 
-* available:
-* auxiliary:
-* lurking:
+* bind: v. to tie something with rope or string
+* capture: v. to take someone as a prisoner
+* available: adj. able to be seen, used, bought etc.
+* auxiliary: adj. giving additional help or support to others
+* lurk: v. to wait in hiding, especially for some bad purpose
 * lexical:  
-* extensive:
-* tractable:
+* extensive: adj. spreading over a large area
+* tractable: 
