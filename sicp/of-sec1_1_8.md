@@ -6,16 +6,16 @@ Procedures as Black-Box Abstractions
 
 
 * The problem of computing would often beaks up naturally into a number of sub-problems.
-* According to this, the program can be viewd as a cluster of procedures.  
+* According to this, the program can be viewed as a cluster of procedures.  
 * Each procedure accomplishes an identifiable task that can be used as a module in defining other procedures.
-* We are able to regard the procedure mirrorring the (main) problem as a "black box".  
+* We are able to regard the procedure mirroring the (main) problem as a "black box".  
 * Namely, we are concerned with the fact that it computes its result rather than the way that it computes its result.
-* As far as the procedure mirrorring the sub-problem is concerned, 
+* As far as the procedure mirroring the sub-problem is concerned, 
 * the main "procedure" is a just abstraction of the procedure, a so-called *procedural abstraction*.
-* We often get a procedure from another arogrammer as a black box,
+* We often get a procedure from another programmer as a black box,
 * so we, users, should not need to know how the procedure is implemented in order to use it.
 
-For instance, the `sqrt` we have defined in the preceeding sections can be divided into a `sqrt-iter`, 
+For instance, the `sqrt` we have defined in the preceding sections can be divided into a `sqrt-iter`, 
 `sqrt-iter` into `good-enough?` and `improve`, `good-enough?` into `suare` and `abs` etc....
 
 
@@ -44,13 +44,13 @@ For instance, consider the following definition of `good-enough?`:
 * This is because that the parameter `x` is local to the bodies.  
 * Bound variables in the code above: `guess` and `x`.  
 * Free variables in the code above: `abs` and `square`.
-* For example, `good-enough?` will compute a different function when we sbustitute `cos` for `abs` in its definition.
+* For example, `good-enough?` will compute a different function when we substitute `cos` for `abs` in its definition.
 
 
 * The issue with the program is that the important procedure to users is the main procedure itself.
 * the reason we write programs to work together with the main program is that it needs them.
 
-* We want to localize the subprocedures, hiding them inside the main procedure so that it could coexist with other successive the subprocedures.
+* We want to localize the sub-procedures, hiding them inside the main procedure so that it could coexist with other successive the sub-procedures.
 * To make this possible, we allow a procedure to have internal definitions that are local to that procedure.
 * See the following example of definition of `sqrt`:
 
@@ -68,8 +68,8 @@ For instance, consider the following definition of `good-enough?`:
 ```
 
 * Such nesting of definitions, called *block structure*, is basically the right solution to the simplest name-packing problem.  
-* But there is a better idea unvealed here.
-* Since the difinition of `sqrt` above binds `x`,
+* But there is a better idea unveiled here.
+* Since the definition of `sqrt` above binds `x`,
 * the procedures `good-enough?`, `improve`, and `sqrt-iter`, which are defined internally to `sqrt`, are in the scope of `x`.  
 * Thus, we do not need to pass `x` explicitly to each of these procedures.
 * Instead, we allow `x` to be a **free variable** in the internal definitions, as shown below.
@@ -121,7 +121,7 @@ is important tool for helping to organize the construction of large programs.
 * suppress: v. to control a feeling, so that you do not show it or it does not affect you
 * abstract: adj. based on ideas rather than specific examples or real events
 * implement: v. to begin to use a plan or system
-* profound: adj. showing a lot of knowledge and understandign a subject
+* profound: adj. showing a lot of knowledge and understanding a subject
 * bind: v. to tie something with rope or string
 * capture: v. to take someone as a prisoner
 * available: adj. able to be seen, used, bought etc.
