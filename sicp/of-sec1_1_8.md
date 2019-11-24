@@ -50,6 +50,54 @@ For instance, consider the following definition of `good-enough?`:
 * The issue with the program is that the important procedure to users is the main procedure itself.
 * the reason we write programs to work together with the main program is that it needs them.
 
+* We want to localize the subprocedures, hiding them inside the main procedure so that it could coexist with other successive the subprocedures.
+* To make this possible, we allow a procedure to have internal definitions that are local to that procedure.
+* See the following example of definition of `sqrt`:
+
+```scheme
+(define (sqrt x)
+ (define (good-enough? guess x)
+   (< (abs (- (square guess ) x)) 0.001))
+ (define (improve guess x)
+   (average guess (/ x guess)))
+ (define (sqrt-iter guess x)
+   (if (good-enough? guess x)
+   guess
+   (sqrt-iter (improve guess x) x)))
+(sqrt-iter 1.0 x))
+```
+
+* Such nesting of definitions, called *block structure*, is basically the right solution to the simplest name-packing problem.  
+* But there is a better idea unvealed here.
+* Since the difinition of `sqrt` above binds `x`,
+* the procedures `good-enough?`, `improve`, and `sqrt-iter`, which are defined internally to `sqrt`, are in the scope of `x`.  
+* Thus, we do not need to pass `x` explicitly to each of these procedures.
+* Instead, we allow `x` to be a **free variable** in the internal definitions, as shown below.
+
+
+```scheme
+(define (sqrt x)
+ (define (good-enough? guess x)
+   (< (abs (- (square guess ) x)) 0.001))
+ (define (improve guess x)
+   (average guess (/ x guess)))
+ (define (sqrt-iter guess)
+   (if (good-enough? guess)
+   guess
+   (sqrt-iter (improve guess))))
+(sqrt-iter 1.0))
+```
+
+* In the definition above, `x` gets its value from the argument with which the surrounded procedure `sqrt` is called.
+* This discipline is called *lexical scoping*.
+
+We will use block structure extensively to help us beak up large programs into pieces with which is easy to deal.
+
+The idea of block structure appears in most advanced programming languages and
+is important tool for helping to organize the construction of large programs.
+
+
+
 ## Keywords
 
 * recursive: *the procedure is defined in terms of itself*
@@ -58,8 +106,12 @@ For instance, consider the following definition of `good-enough?`:
 * free variable
 * scope
 * capturing
+* block structure
+* lexical scoping
 
 ## Summary
+
+
 
 ## Definition
 
@@ -70,7 +122,14 @@ For instance, consider the following definition of `good-enough?`:
 * suppress: v. to control a feeling, so that you do not show it or it does not affect you
 * abstract: adj. based on ideas rather than specific examples or real events
 * implement: v. to begin to use a plan or system
-* profound:
-* intention:
+* profound: adj. showing a lot of knowledge and understandign a subject
+* intention: 
 * bind:
 * capture: 
+* isolation: 
+* available:
+* auxiliary:
+* lurking:
+* lexical:  
+* extensive:
+* tractable:
