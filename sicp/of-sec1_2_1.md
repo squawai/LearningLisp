@@ -40,6 +40,15 @@ Linear Recursion and Iteration
 * Such a process is called a *linear iterative process*.
 * The variables in program of an iterative process provide a complete description of the state of the process at any point.
 
+* Caution: the notion of a recursive *process* is not the notion of a recursive *procedure*.
+	* Procedure: referring to the syntactic fact that procedure definition refers to the procedure itself
+	* Process:   speaking about how the process evolves.
+* Most implementations of common languages are designed in such a way that
+* the interpretation of any recursive procedure consumes an amount of memory that grows with the number of procedure calls, even when the process described iterative.
+* Consequently, these languages can describe iterative processes only by resorting to special-purpose "looping constructs".
+* The implementation of Scheme does not share this lack.
+* It will execute an iterative process in constant space, even if the iterative process is described by a recursive procedure.
+* An implementation with this property is called *tail-recursive*.
 
 
 ## Keywords
@@ -49,6 +58,7 @@ Linear Recursion and Iteration
 * linear recursive process
 * iterative process
 * state variable
+* tail-recursive
 
 ## Definitions
 
@@ -62,3 +72,7 @@ Linear Recursion and Iteration
 * terminate: v. bring to an end
 * resume: v. begin again or continue after a pause or interruption
 * supply: v. make something needed available to someone
+* syntactic: adj.
+	* syntax: n. the arrangement of words and phrases to create well-formed sentences in a language; the structure of statements in a computer language
+* evolve: v. develop gradually
+* defect: n. a shortcoming, imperfection, or lack
