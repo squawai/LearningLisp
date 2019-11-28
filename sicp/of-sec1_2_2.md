@@ -64,6 +64,51 @@ b <- a
 
 [^1]: From simple view of Recursion Theory, the existence of tree-recursive process which can compute the desired guarantees that the our purpose can be done. 
 
+* **Example: Counting change**
+
+> How many different ways can we make change of $1.00, 
+> given half-dollars, quarters, dimes, nickels, and pennies?
+> More generally, can we write a procedure to compute the number of ways to change any given amount of money ?
+
+* The number of way to change amount `a` using `n` kinds of coins equals
+	* the number of ways to change amount `a` using all but the first kind of coin, plus
+	* the number of ways to change amount `a - d` using all `n` kinds of coins, where `d` is the denomination of the first kind of coin.
+* The ways to make change can be divided into two groups:
+	1. those that do not use any of the first kind of coin, and
+	2. those that do.
+* Therefore, the total number of ways to make change for some amount is equal to the number of ways to make change for the amount without using any of the first kind of coin, plus
+* the number of ways to make change assuming that we do use the first kind of coin.
+* But the later number is equal to the number of the number of ways to make change for the amount that remains after using a coin of the first kind.
+
+* Now we can recursively reduce the problem of changing a given amount to the problem of changing smaller amounts using fewer kinds of coins.
+	* if `a` is exactly `0`, we should count that as 1 way to make change.
+	* If `a` is less than `0`, we should count that as 0 ways to make change.
+	* if `n` is `0`, we should count that as 0 ways to make change.
+* We can easily translate this description into a recursive procedure:
+
+```scheme
+(define (count-change amount)
+  (cc amount 5))
+
+(define (cc amount kinds-of-coins)
+  (cond ((= amount 0) 1)
+    ((or (< amount 0)
+      (= kinds-of-coins 0))
+      0)
+      (else
+      (+ (cc amount (- kinds-of-coins 1))
+        (cc (- amount (first-denomination kinds-of-coins))
+        kinds-of-coins)))))
+
+(define (first-denomination kinds-of-coins)
+  (cond ((= kinds-of-coins 2) 5)
+        ((= kinds-of-coins 3) 10)
+        ((= kinds-of-coins 4) 25)
+        ((= kinds-of-coins 5_ 50))))
+```
+
+
+
 ## Keywords
 
 * *tree recursion*
@@ -74,3 +119,8 @@ b <- a
 * redundant: adj. not or no longer needed or useful 
 * initialize: v. (often **to be initialized to**) set to the value or put in the condition appropriate to the start of an operation
 * simultaneous: adj. occurring, operating, or done at the same time
+* amount: n. a quantity of something, especially the total of a thing or things in number, size, value, or extent
+* denomination: n. the face value of a banknote, coin, or postage stamp
+* convince: v. cause (someone) to be believe firmly in the truth of something
+* degenerate: adj. having lost the physical, mental, or moral qualities considered normal and desirable; lacking some usual or expected property or quality
+* redundancy: n. the state of being not or no longer useful
