@@ -14,6 +14,9 @@ Orders of Growth
 * digit: n. any of the numbers from 0 to 9; a person's fingers, thumb or toe
 * accuracy: n. the state of being exact or correct; the degree to which the result of a measurement or calculation matches the correct value or a standard
 * crude: adj. in its natural state, before it has been treated with chemicals; not adjusted corrected; simple and not very accurate but giving a general idea of something; a simple and basic; not showing much skill or attention to detail; offensive or rude, especially about sex
+	* accurate: adj. correct and true in every detail; able to give completely correct information: representing somebody/something in a way that is true and exact
+	* skill: n. a particular ability or type of ability
+	* attention: n. the act of listening to, looking at or thinking about somebody/something carefully; interest that people show in somebody/something; [U.] special care, action or treatment;  [C, usually plural] things done to try to please somebody or to show an interest in them
 * indication: n. a sign or piece of information that shows that something exists or is likely happen; a change in the body or mind that suggests that particular medical treatment is necessary
 * double: v. to become, or make something become, twice as big, or twice as much or as many
 * increment: n. an increase or addition, especially one of a series; a regular increase in salary
